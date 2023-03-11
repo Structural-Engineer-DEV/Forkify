@@ -11,10 +11,6 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
-
 const controlRecipies = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -125,10 +121,6 @@ const controlAddRecipe = async function (newRecipe) {
   }
 };
 
-const newFeature = function () {
-  console.log('welcome');
-};
-
 const init = function () {
   bookmarksView.addHandlerRender(controlBookmarks);
   recipeView.addHandlerRender(controlRecipies);
@@ -137,8 +129,6 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addaHandlerClick(controlPagination);
   addRecipeView.addHandlerUpload(controlAddRecipe);
-  console.log('welcome');
-  newFeature();
 };
 
 init();
